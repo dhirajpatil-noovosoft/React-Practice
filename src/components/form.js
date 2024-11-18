@@ -4,6 +4,7 @@ export default class Form extends Component {
     inputRef = createRef();
 
     handleClick = () => {
+        console.log(this.inputRef.current)
         this.inputRef.current.focus();
     }
 
@@ -18,3 +19,6 @@ export default class Form extends Component {
         );
     }
 }
+/*
+input ref can store anything except element or not
+ */

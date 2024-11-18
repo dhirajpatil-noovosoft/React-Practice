@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 export default class Counter extends Component {
     static propTypes = {
-        name:PropTypes.string
+        name :PropTypes.string
     }
     state = {
         age: 42,
@@ -19,10 +19,12 @@ export default class Counter extends Component {
     }
     shouldComponentUpdate(nextProps, nextState)
     {
+
         console.log("bef ", nextProps.name)
         console.log("next ", nextState.name)
         return true;
         return false; // if u don't want it to be updated
+
     }
     handleAgeChange = () => {
         this.setState({
@@ -31,6 +33,7 @@ export default class Counter extends Component {
     };
 
     render() {
+        console.log("I'm Dhiraj")
         return (
             <>
                 <button onClick={this.handleAgeChange}>

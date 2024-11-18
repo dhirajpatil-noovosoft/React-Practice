@@ -17,10 +17,10 @@ function NewComponent():JSX.Element
     }
     function Show({title, count}: ShowProps){
         return (
-            <button onClick={increase}>
+            <input onClick={increase}>
                 {title}
                 {count}
-            </button>
+            </input >
         )
     }
     return (

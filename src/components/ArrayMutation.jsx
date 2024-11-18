@@ -1,11 +1,27 @@
 import React, { useState } from 'react';
 
 let nextId = 0;
-
+const A = ({ artists, setArtist }) => {
+    return <button onClick={() => {
+        setArtist([
+            ...artists,
+            {id: artists[artists.length - 1].id + 1,name: 'someName'},
+        ])
+        setArtist(()=> {
+               return[ ...artists,
+                {id: artists[artists.length - 1].id + 1,name: 'someName'}]
+        });
+    }}>
+        Add artist
+    </button>
+}
 export default function List() {
     const [name, setName] = useState('');
     const [artists, setArtists] = useState([]);
 
+    // {
+    //     setofActions
+    // }, [dep_array]
     return (
         <>
             <h1>Inspiring sculptors:</h1>
@@ -27,3 +43,6 @@ export default function List() {
         </>
     );
 }
+// A@email.com   |
+// B@email.com   |
+// C@emai.com    |

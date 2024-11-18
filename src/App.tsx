@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowseRouter} from 'react-router-dom';
 import MyButton from './components/MyButtonState'
 import ListOfProducts from './components/ListOfProducts'
 import NewComponent from "./components/newComponent";
@@ -11,6 +12,8 @@ import StateComponentMemory from "./components/StateComponentMemory"
 import VideoPlay from "./components/VideoPlay";
 import UpdateObject from "./components/UpdateObject";
 import ArrayMutation from "./components/ArrayMutation"
+import Forming from "./components/ManagingState"
+import ExtractUsingReducer from "./components/ExtractUsingReducer"
 function App() {
     let cmp;
     if(5 <= 4)
@@ -20,6 +23,7 @@ function App() {
   return (
     <div className="App">
         {cmp}
+        {(5>=4) ? <MyButton/> : <NewComponent/>}
         <ListOfProducts/>
         <BasicComponent name={"dhiraj"} />
         <Form />
@@ -29,6 +33,8 @@ function App() {
         <VideoPlay />
         <UpdateObject />
         <ArrayMutation />
+        <Forming />
+        <ExtractUsingReducer />
     </div>
   );
 }
